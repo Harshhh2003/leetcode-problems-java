@@ -22,7 +22,15 @@ public class deletenthnode {
         node slow = head;
 
         for (int i = 1; i <= n; i++) {
+            if (fast == null) {  
+                return;
+            }
             fast = fast.next;
+        }
+
+        if (fast == null) {  
+            head = head.next;
+            return; // we uess this condition  to delete the 1st / head node
         }
 
         while (fast.next != null) {
@@ -30,8 +38,7 @@ public class deletenthnode {
             slow = slow.next;
         }
 
-        slow.next = slow.next.next;
-        
+        slow.next = slow.next.next;  
     }
 
     public static void main(String[] args) {
@@ -46,7 +53,7 @@ public class deletenthnode {
 
         display(a);
 
-        nthnode(a, 2);
+        nthnode(a, 4);  // Delete the 4th node
 
         display(a);
     }
