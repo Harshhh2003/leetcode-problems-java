@@ -16,14 +16,11 @@ public class balancedbracket{
           }
             }
            
-        }
-        if(str.size()>0) return false;
+        }   if(str.size()>0) return false;
         return true;
-    }
-    public static void main(String[] args) {
+    }public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String st = sc.nextLine();
         // System.out.println(st);
-        System.out.println(balanced(st));
-}
+        System.out.println(balanced(st));}
 }
